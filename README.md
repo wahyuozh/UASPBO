@@ -70,20 +70,20 @@ Pada bagian ini merupakan kode untuk membuat class notepad yang mana pertama mem
         color_menu.add_command(label="Change Color", command=self.change_color) # Menambahkan perintah "Change Color" ke submenu warna
         Daftar_menu.add_cascade(label="Color", menu=color_menu) # Menambahkan submenu warna ke menu utama
         
-    # Create Menu Exit 
+   # Create Menu Exit 
     Pada bagian ini untuk membuat menu yang menghasilkan keluar atau menutup program nya ketika di klik adapun code nya sebagai berikut. 
     
      Daftar_menu.add_cascade(label="Exit", command=self.window.quit) # Menambahkan perintah "Exit" ke menu utama
         self.window.config(menu=Daftar_menu) # Mengonfigurasi menu jendela dengan daftar menu yang telah dibuat
     
    
-    # Membuat fungsi untuk menghapus area teks 
+   # Membuat fungsi untuk menghapus area teks 
     pada bagian menu hapus kode akan berjalan dengan fungsi sebagai berikut
     
         def new_file(self): # Menghapus isi area teks
             self.text_area.delete(1.0, END)
      
-     # Membuat fungsi untuk membuka file
+   # Membuat fungsi untuk membuka file
      pada bagian open file fungsi yang digunakan untuk kode bisa berjalan sebagai berikut
      
       def open_file(self): # Memunculkan  membuka file
@@ -94,7 +94,7 @@ Pada bagian ini merupakan kode untuk membuat class notepad yang mana pertama mem
             self.text_area.insert(END, content) # Menyisipkan isi file ke area teks
             file.close() # Menutup file
             
-      # Membuat Save File 
+   # Membuat Save File 
       pada bagian ini fungsi untuk me save file yang dibuat adalah sebagai berikut. 
           def save_file(self):
             file = asksaveasfile(mode="w", defaultextension=".txt", filetypes=[('Text Files', '*.txt')]) # Memunculkan dialog penyimpanan file
@@ -103,29 +103,29 @@ Pada bagian ini merupakan kode untuk membuat class notepad yang mana pertama mem
                 file.write(text) # Menulis teks ke file
                 file.close() # Menutup file
                 
-        # Fungsi untuk memotong teks
+   # Fungsi untuk memotong teks
         
             def cut_text(self):
             self.text_area.event_generate("<<Cut>>") # Memanggil perintah cut pada area teks
             
-        # Fungsi untuk mengcopy teks 
+   # Fungsi untuk mengcopy teks 
         
         def copy_text(self):
         self.text_area.event_generate("<<Copy>>") # Memanggil perintah copy pada area teks
         
-        # Fungsi untuk me paste teks 
+  # Fungsi untuk me paste teks 
         
         def paste_text(self):
         self.text_area.event_generate("<<Paste>>") # Memanggil perintah paste pada area teks
         
-        # Fungsi untuk mengatur warna pada menu calor 
+  # Fungsi untuk mengatur warna pada menu calor 
         
         def change_color(self):
         color = colorchooser.askcolor() # Memunculkan dialog pemilih warna
         if color[1] is not None:
             self.text_area.config(bg=color[1]) # Mengubah warna latar belakang area teks
             
-         # Fungsi untuk mengatur font serta size font 
+  # Fungsi untuk mengatur font serta size font 
         
             def change_font_size(self):
             size = simpledialog.askinteger("Font Size", "Enter font size:") #untuk font size
@@ -142,7 +142,7 @@ Pada bagian ini merupakan kode untuk membuat class notepad yang mana pertama mem
                     font.configure(family=family)
                     self.text_area.configure(font=font)
                     
-            # menjalankan keseluruhan kode hingga menghasilkan notepad 
+  # menjalankan keseluruhan kode hingga menghasilkan notepad 
             
              if __name__ == "__main__":
                 window = Tk()  # Membuat objek jendela
