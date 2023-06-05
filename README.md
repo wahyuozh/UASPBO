@@ -142,10 +142,14 @@ Pada bagian ini merupakan kode untuk membuat class notepad yang mana pertama mem
                     font.configure(family=family)
                     self.text_area.configure(font=font)
                     
-  # menjalankan keseluruhan kode hingga menghasilkan notepad 
+  # Menjalankan keseluruhan kode hingga menghasilkan notepad 
             
              if __name__ == "__main__":
                 window = Tk()  # Membuat objek jendela
                 notepad = Notepad(window) # Membuat objek Notepad dengan jendela sebagai argumen
                 window.mainloop() # Menjalankan loop utama jendela
+                
+   # Penjelasan secara keseluruhan 
+   
+     Pada dasarnya seluruh kode digunakan untuk membuat sebuah notepad. notepad dibentuk dengan sesuai menu yang ada dengan menggunakan bahasa python dan bantuan tkinter maka dihasilkan notepad. 
 
