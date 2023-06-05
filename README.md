@@ -151,5 +151,5 @@ Pada bagian ini merupakan kode untuk membuat class notepad yang mana pertama mem
                 
    # Penjelasan secara keseluruhan 
    
-     Pada dasarnya seluruh kode digunakan untuk membuat sebuah notepad. notepad dibentuk dengan sesuai menu yang ada dengan menggunakan bahasa python dan bantuan tkinter maka dihasilkan notepad. 
+Pada dasarnya seluruh kode digunakan untuk membuat sebuah notepad. notepad dibentuk dengan sesuai menu yang ada dengan menggunakan bahasa python dan bantuan tkinter maka dihasilkan notepad. 
 
