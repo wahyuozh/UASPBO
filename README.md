@@ -77,5 +77,75 @@ Pada bagian ini merupakan kode untuk membuat class notepad yang mana pertama mem
         self.window.config(menu=Daftar_menu) # Mengonfigurasi menu jendela dengan daftar menu yang telah dibuat
     
    
-   
-             
+    # Membuat fungsi untuk menghapus area teks 
+    pada bagian menu hapus kode akan berjalan dengan fungsi sebagai berikut
+    
+        def new_file(self): # Menghapus isi area teks
+            self.text_area.delete(1.0, END)
+     
+     # Membuat fungsi untuk membuka file
+     pada bagian open file fungsi yang digunakan untuk kode bisa berjalan sebagai berikut
+     
+      def open_file(self): # Memunculkan  membuka file
+        file = askopenfile(mode="r", filetypes=[('Text Files', '*.txt')])
+        if file is not None:
+            content = file.read() # Membaca isi file
+            self.text_area.delete(1.0, END) # Menghapus isi area teks
+            self.text_area.insert(END, content) # Menyisipkan isi file ke area teks
+            file.close() # Menutup file
+            
+      # Membuat Save File 
+      pada bagian ini fungsi untuk me save file yang dibuat adalah sebagai berikut. 
+          def save_file(self):
+            file = asksaveasfile(mode="w", defaultextension=".txt", filetypes=[('Text Files', '*.txt')]) # Memunculkan dialog penyimpanan file
+            if file is not None:
+                text = self.text_area.get(1.0, END) # Mendapatkan teks dari area teks
+                file.write(text) # Menulis teks ke file
+                file.close() # Menutup file
+                
+        # Fungsi untuk memotong teks
+        
+            def cut_text(self):
+            self.text_area.event_generate("<<Cut>>") # Memanggil perintah cut pada area teks
+            
+        # Fungsi untuk mengcopy teks 
+        
+        def copy_text(self):
+        self.text_area.event_generate("<<Copy>>") # Memanggil perintah copy pada area teks
+        
+        # Fungsi untuk me paste teks 
+        
+        def paste_text(self):
+        self.text_area.event_generate("<<Paste>>") # Memanggil perintah paste pada area teks
+        
+        # Fungsi untuk mengatur warna pada menu calor 
+        
+        def change_color(self):
+        color = colorchooser.askcolor() # Memunculkan dialog pemilih warna
+        if color[1] is not None:
+            self.text_area.config(bg=color[1]) # Mengubah warna latar belakang area teks
+            
+         # Fungsi untuk mengatur font serta size font 
+        
+            def change_font_size(self):
+            size = simpledialog.askinteger("Font Size", "Enter font size:") #untuk font size
+            if size:
+                font = tkfont.Font(self.text_area, self.text_area.cget("font")) #mengganti size di area notepad
+                font.configure(size=size) #font size
+                self.text_area.configure(font=font) 
+
+        
+            def change_font(self): #untuk menukar font
+                family = simpledialog.askstring("Font Family", "Enter font family:") #jenis font yang akan diganti
+                if family:
+                    font = tkfont.Font(self.text_area, self.text_area.cget("font")) 
+                    font.configure(family=family)
+                    self.text_area.configure(font=font)
+                    
+            # menjalankan keseluruhan kode hingga menghasilkan notepad 
+            
+             if __name__ == "__main__":
+                window = Tk()  # Membuat objek jendela
+                notepad = Notepad(window) # Membuat objek Notepad dengan jendela sebagai argumen
+                window.mainloop() # Menjalankan loop utama jendela
+
