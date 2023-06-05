@@ -49,11 +49,11 @@ Pada bagian ini merupakan kode untuk membuat class notepad yang mana pertama mem
    # Create Menu Edit
    Pada kode ini menjelaskan proses pembuatan menu untuk edit file yang mana pada menu ini terdapat sub menu cut untuk memotong teks, copy untuk mengcopy teks serta pase untuk me pastekan text yang di copy. adapun code nya sebagai berikut. 
    
-   edit_menu = Menu(Daftar_menu, tearoff=0) # Membuat menu edit dengan submenu
-        edit_menu.add_command(label="Cut", command=self.cut_text) # Menambahkan perintah "Cut" ke submenu edit
-        edit_menu.add_command(label="Copy", command=self.copy_text) # Menambahkan perintah "Copy" ke submenu edit
-        edit_menu.add_command(label="Paste", command=self.paste_text) # Menambahkan perintah "Paste" ke submenu edit
-        Daftar_menu.add_cascade(label="Edit", menu=edit_menu) # Menambahkan submenu edit ke menu utama
+       edit_menu = Menu(Daftar_menu, tearoff=0) # Membuat menu edit dengan submenu
+            edit_menu.add_command(label="Cut", command=self.cut_text) # Menambahkan perintah "Cut" ke submenu edit
+            edit_menu.add_command(label="Copy", command=self.copy_text) # Menambahkan perintah "Copy" ke submenu edit
+            edit_menu.add_command(label="Paste", command=self.paste_text) # Menambahkan perintah "Paste" ke submenu edit
+            Daftar_menu.add_cascade(label="Edit", menu=edit_menu) # Menambahkan submenu edit ke menu utama
    
    # Create Menu format 
    Pada bagian ini menjelaskan menu untuk membuat format tulisan nya yang mana tulisannya bisa diubah menjadi sesuai font yang kita mau sedangkan size nya juga sesuai dengan yang kita mau. dengan memasukan jenis font maka font dari tulisan akan berubah dengan memasukan angka size untuk font maka size nya akan berubah juga. 
